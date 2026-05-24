@@ -1,21 +1,31 @@
 import Image from "next/image";
 
-const services = [
+type Service = {
+  title: string;
+  text: string;
+  image: string;
+};
+
+const services: Service[] = [
   {
     title: "Resin Tables",
     text: "Custom one-of-a-kind resin tables designed to become the centerpiece of any space.",
+    image: "/images/service-resin-tables.png",
   },
   {
     title: "Calligraphy Art",
     text: "Arabic calligraphy artworks personalized with meaning, elegance, and artistic identity.",
+    image: "/images/service-calligraphy-art.png",
   },
   {
     title: "Paintings & Wall Art",
     text: "Original paintings and wall pieces that bring depth, character, and warmth to interiors.",
+    image: "/images/service-paintings-wall-art.png",
   },
   {
     title: "Custom Décor Pieces",
     text: "Bespoke handmade décor pieces crafted to reflect your taste and elevate your space.",
+    image: "/images/service-custom-decor.png",
   },
 ];
 
@@ -38,7 +48,8 @@ export default function Home() {
                 alt="Lamasat Logo"
                 width={64}
                 height={64}
-                className="h-16 w-auto object-contain"
+                className="object-contain"
+                style={{ width: "64px", height: "auto" }}
                 priority
               />
             </div>
@@ -118,18 +129,18 @@ export default function Home() {
           </div>
         </div>
 
-       <div className="relative min-h-[520px] overflow-hidden rounded-t-[180px] border border-[#C6A45D]/30 shadow-2xl">
-  <Image
-    src="/images/lamasat-hero.png"
-    alt="Lamasat resin table and calligraphy interior"
-    fill
-    className="object-cover"
-    priority
-    sizes="(max-width: 1024px) 100vw, 50vw"
-  />
+        <div className="relative min-h-[520px] overflow-hidden rounded-t-[180px] border border-[#C6A45D]/30 shadow-2xl">
+          <Image
+            src="/images/lamasat-hero.png"
+            alt="Lamasat resin table and calligraphy interior"
+            fill
+            className="object-cover"
+            priority
+            sizes="(max-width: 1024px) 100vw, 50vw"
+          />
 
-  <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/25 via-transparent to-transparent" />
-</div>
+          <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/25 via-transparent to-transparent" />
+        </div>
       </section>
 
       <section id="about" className="border-y border-[#C6A45D]/20 bg-white/40">
@@ -185,7 +196,17 @@ export default function Home() {
               key={service.title}
               className="group border border-[#C6A45D]/25 bg-[#FFFDF8] p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="mb-7 h-40 rounded-2xl bg-[linear-gradient(135deg,#111111,#5A3E2B,#C6A45D)]" />
+              <div className="relative mb-7 h-44 overflow-hidden rounded-2xl">
+                <Image
+                  src={service.image}
+                  alt={`${service.title} by Lamasat`}
+                  fill
+                  className="object-cover transition duration-500 group-hover:scale-105"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/25 via-transparent to-transparent" />
+              </div>
+
               <h4 className="font-serif text-2xl">{service.title}</h4>
               <p className="mt-4 leading-7 text-[#4B4035]">{service.text}</p>
             </div>
@@ -292,7 +313,8 @@ export default function Home() {
                 alt="Lamasat Logo"
                 width={48}
                 height={48}
-                className="h-12 w-auto object-contain invert"
+                className="object-contain invert"
+                style={{ width: "48px", height: "auto" }}
               />
             </div>
 
