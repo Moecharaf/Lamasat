@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 const services = [
   {
     title: "Resin Tables",
@@ -30,11 +32,21 @@ export default function Home() {
       <header className="sticky top-0 z-50 border-b border-[#C6A45D]/20 bg-[#F7F2E8]/90 backdrop-blur">
         <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-5">
           <div className="flex items-center gap-4">
-            <div className="flex h-14 w-14 items-center justify-center rounded-full border border-[#C6A45D]/40 text-2xl font-bold">
-              ل
+            <div className="flex h-16 w-16 items-center justify-center">
+              <Image
+                src="/images/lamasat-logo-black.png"
+                alt="Lamasat Logo"
+                width={64}
+                height={64}
+                className="h-16 w-auto object-contain"
+                priority
+              />
             </div>
+
             <div>
-              <h1 className="font-serif text-2xl tracking-[0.22em]">LAMASAT</h1>
+              <h1 className="font-serif text-2xl tracking-[0.22em]">
+                LAMASAT
+              </h1>
               <p className="text-xs tracking-[0.25em] text-[#A77D2F]">
                 ART STUDIO · لمسات
               </p>
@@ -42,11 +54,21 @@ export default function Home() {
           </div>
 
           <nav className="hidden items-center gap-8 text-sm md:flex">
-            <a href="#about">About</a>
-            <a href="#services">Services</a>
-            <a href="#portfolio">Portfolio</a>
-            <a href="#process">Process</a>
-            <a href="#contact">Contact</a>
+            <a href="#about" className="transition hover:text-[#A77D2F]">
+              About
+            </a>
+            <a href="#services" className="transition hover:text-[#A77D2F]">
+              Services
+            </a>
+            <a href="#portfolio" className="transition hover:text-[#A77D2F]">
+              Portfolio
+            </a>
+            <a href="#process" className="transition hover:text-[#A77D2F]">
+              Process
+            </a>
+            <a href="#contact" className="transition hover:text-[#A77D2F]">
+              Contact
+            </a>
           </nav>
 
           <a
@@ -98,10 +120,13 @@ export default function Home() {
 
         <div className="relative min-h-[520px] overflow-hidden rounded-t-[180px] border border-[#C6A45D]/30 bg-[#1B1916] p-8 shadow-2xl">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#C6A45D55,transparent_35%),linear-gradient(135deg,#1B1916,#3A2B1E)]" />
+
           <div className="relative flex h-full flex-col justify-end">
             <div className="mb-10 rounded-3xl border border-[#C6A45D]/30 bg-[#F7F2E8]/95 p-8 shadow-xl">
               <div className="mb-8 h-52 rounded-2xl bg-[linear-gradient(135deg,#5A3E2B,#111111_45%,#C6A45D_48%,#7B5733_55%,#1B1916)]" />
-              <h3 className="font-serif text-3xl">Resin. Wood. Calligraphy.</h3>
+              <h3 className="font-serif text-3xl">
+                Resin. Wood. Calligraphy.
+              </h3>
               <p className="mt-3 leading-7 text-[#4B4035]">
                 A visual identity inspired by handcrafted material, warm wood
                 tones, black resin, and Arabic artistic heritage.
@@ -230,7 +255,9 @@ export default function Home() {
           </div>
 
           <div className="rounded-3xl bg-[#111111] p-8 text-white">
-            <h4 className="font-serif text-3xl">Request a Free Consultation</h4>
+            <h4 className="font-serif text-3xl">
+              Request a Free Consultation
+            </h4>
             <p className="mt-4 text-white/70">
               Contact Lamasat to discuss resin tables, calligraphy, paintings,
               and custom décor projects.
@@ -255,12 +282,27 @@ export default function Home() {
 
       <footer className="bg-[#111111] px-6 py-10 text-white">
         <div className="mx-auto flex max-w-7xl flex-col justify-between gap-6 md:flex-row">
-          <div>
-            <p className="font-serif text-3xl tracking-[0.2em] text-[#C6A45D]">
-              LAMASAT
-            </p>
-            <p className="mt-2 text-sm text-white/60">ART STUDIO · لمسات</p>
+          <div className="flex items-center gap-4">
+            <div className="flex h-12 w-12 items-center justify-center">
+              <Image
+                src="/images/lamasat-logo-black.png"
+                alt="Lamasat Logo"
+                width={48}
+                height={48}
+                className="h-12 w-auto object-contain invert"
+              />
+            </div>
+
+            <div>
+              <p className="font-serif text-3xl tracking-[0.2em] text-[#C6A45D]">
+                LAMASAT
+              </p>
+              <p className="mt-2 text-sm text-white/60">
+                ART STUDIO · لمسات
+              </p>
+            </div>
           </div>
+
           <p className="text-sm text-white/50">
             © 2026 Lamasat Art Studio. All rights reserved.
           </p>
