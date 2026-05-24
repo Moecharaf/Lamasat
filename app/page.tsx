@@ -6,6 +6,12 @@ type Service = {
   image: string;
 };
 
+type PortfolioItem = {
+  title: string;
+  category: string;
+  image: string;
+};
+
 const services: Service[] = [
   {
     title: "Resin Tables",
@@ -29,7 +35,40 @@ const services: Service[] = [
   },
 ];
 
-const process = [
+const portfolio: PortfolioItem[] = [
+  {
+    title: "Arabic Calligraphy Feature Wall",
+    category: "Calligraphy Art",
+    image: "/images/portfolio-1.png",
+  },
+  {
+    title: "Islamic Prayer Hall Design",
+    category: "Interior Décor",
+    image: "/images/portfolio-2.png",
+  },
+  {
+    title: "Decorative Mosque Arches",
+    category: "Architectural Décor",
+    image: "/images/portfolio-3.png",
+  },
+  {
+    title: "I.M.A.M Reception Wall",
+    category: "Custom Wall Design",
+    image: "/images/portfolio-4.png",
+  },
+  {
+    title: "Dome Calligraphy Artwork",
+    category: "Arabic Calligraphy",
+    image: "/images/portfolio-5.png",
+  },
+  {
+    title: "Luxury Calligraphy Panel",
+    category: "Residential Décor",
+    image: "/images/portfolio-6.png",
+  },
+];
+
+const creationProcess = [
   "Share Your Idea",
   "Design & Materials",
   "Craftsmanship",
@@ -138,7 +177,6 @@ export default function Home() {
             priority
             sizes="(max-width: 1024px) 100vw, 50vw"
           />
-
           <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/25 via-transparent to-transparent" />
         </div>
       </section>
@@ -223,12 +261,32 @@ export default function Home() {
             <h3 className="mt-3 font-serif text-5xl">Portfolio</h3>
           </div>
 
-          <div className="mt-14 grid gap-5 md:grid-cols-3">
-            {[1, 2, 3, 4, 5, 6].map((item) => (
-              <div
-                key={item}
-                className="h-72 rounded-2xl border border-[#C6A45D]/20 bg-[linear-gradient(135deg,#F7F2E8,#C6A45D,#5A3E2B,#111111)]"
-              />
+          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {portfolio.map((item) => (
+              <article
+                key={item.title}
+                className="group overflow-hidden rounded-2xl border border-[#C6A45D]/20 bg-[#181818] shadow-xl transition hover:-translate-y-1 hover:border-[#C6A45D]/50"
+              >
+                <div className="relative h-80 overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={`${item.title} by Lamasat`}
+                    fill
+                    className="object-cover transition duration-700 group-hover:scale-105"
+                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/75 via-[#111111]/10 to-transparent" />
+                </div>
+
+                <div className="p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C6A45D]">
+                    {item.category}
+                  </p>
+                  <h4 className="mt-3 font-serif text-2xl text-white">
+                    {item.title}
+                  </h4>
+                </div>
+              </article>
             ))}
           </div>
         </div>
@@ -245,7 +303,7 @@ export default function Home() {
         </div>
 
         <div className="mt-14 grid gap-6 md:grid-cols-4">
-          {process.map((step, index) => (
+          {creationProcess.map((step, index) => (
             <div
               key={step}
               className="border border-[#C6A45D]/25 bg-white/50 p-8 text-center"
