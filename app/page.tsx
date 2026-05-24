@@ -202,7 +202,7 @@ export default function Home() {
               Handcrafted Art with Meaning
             </h3>
             <p className="mt-6 text-lg leading-8 text-[#4B4035]">
-              Lamasat is a Lebanese art studio specializing in handcrafted resin
+              Lamasat is an art studio specializing in handcrafted resin
               tables, Arabic calligraphy, paintings, and bespoke décor. Every
               piece is crafted with passion and care, blending tradition with
               contemporary elegance.
@@ -393,4 +393,4 @@ export default function Home() {
       </footer>
     </main>
   );
-}
+} 
