@@ -118,22 +118,18 @@ export default function Home() {
           </div>
         </div>
 
-        <div className="relative min-h-[520px] overflow-hidden rounded-t-[180px] border border-[#C6A45D]/30 bg-[#1B1916] p-8 shadow-2xl">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,#C6A45D55,transparent_35%),linear-gradient(135deg,#1B1916,#3A2B1E)]" />
+       <div className="relative min-h-[520px] overflow-hidden rounded-t-[180px] border border-[#C6A45D]/30 shadow-2xl">
+  <Image
+    src="/images/lamasat-hero.png"
+    alt="Lamasat resin table and calligraphy interior"
+    fill
+    className="object-cover"
+    priority
+    sizes="(max-width: 1024px) 100vw, 50vw"
+  />
 
-          <div className="relative flex h-full flex-col justify-end">
-            <div className="mb-10 rounded-3xl border border-[#C6A45D]/30 bg-[#F7F2E8]/95 p-8 shadow-xl">
-              <div className="mb-8 h-52 rounded-2xl bg-[linear-gradient(135deg,#5A3E2B,#111111_45%,#C6A45D_48%,#7B5733_55%,#1B1916)]" />
-              <h3 className="font-serif text-3xl">
-                Resin. Wood. Calligraphy.
-              </h3>
-              <p className="mt-3 leading-7 text-[#4B4035]">
-                A visual identity inspired by handcrafted material, warm wood
-                tones, black resin, and Arabic artistic heritage.
-              </p>
-            </div>
-          </div>
-        </div>
+  <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/25 via-transparent to-transparent" />
+</div>
       </section>
 
       <section id="about" className="border-y border-[#C6A45D]/20 bg-white/40">
