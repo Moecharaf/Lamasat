@@ -134,8 +134,15 @@ export default function Home() {
 
       <section id="about" className="border-y border-[#C6A45D]/20 bg-white/40">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-20 lg:grid-cols-2">
-          <div className="min-h-[360px] rounded-3xl bg-[linear-gradient(135deg,#111111,#5A3E2B,#C6A45D)] p-8">
-            <div className="h-full rounded-2xl border border-white/20 bg-black/20" />
+          <div className="relative min-h-[420px] overflow-hidden rounded-3xl border border-[#C6A45D]/25 shadow-xl">
+            <Image
+              src="/images/lamasat-craftsmanship.png"
+              alt="Handcrafted resin table craftsmanship by Lamasat"
+              fill
+              className="object-cover"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/25 via-transparent to-transparent" />
           </div>
 
           <div className="flex flex-col justify-center">
