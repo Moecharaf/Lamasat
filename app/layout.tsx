@@ -13,7 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Lamasat By Fadel· لمسات",
+  title: "Lamasat By Fadel · لمسات",
   description: "Premium Arabic calligraphy, custom décor, wall graphics, banners, vinyl installation, storefront signage, and commercial visual solutions.",
 };
 

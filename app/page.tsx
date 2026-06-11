@@ -507,7 +507,7 @@ export default function Home() {
           </div>
 
           <p className="text-sm text-white/50">
-            © 2026 Lamasat By Fadel· لمسات. All rights reserved.
+            © 2026 Overclocklb.com All rights reserved.
           </p>
         </div>
       </footer>
