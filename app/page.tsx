@@ -163,7 +163,7 @@ export default function Home() {
                 LAMASAT
               </h1>
               <p className="text-xs tracking-[0.25em] text-[#A77D2F]">
-                ART STUDIO · لمسات
+                By Fadel · لمسات
               </p>
             </div>
           </div>
@@ -501,13 +501,13 @@ export default function Home() {
                 LAMASAT
               </p>
               <p className="mt-2 text-sm text-white/60">
-                ART STUDIO · لمسات
+                By Fadel· لمسات
               </p>
             </div>
           </div>
 
           <p className="text-sm text-white/50">
-            © 2026 Lamasat Art Studio. All rights reserved.
+            © 2026 Lamasat By Fadel· لمسات. All rights reserved.
           </p>
         </div>
       </footer>
