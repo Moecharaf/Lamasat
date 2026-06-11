@@ -48,6 +48,11 @@ const services: Service[] = [
   text: "Premium vinyl branding for cars, vans, and commercial vehicles with professional design and clean installation.",
   image: "/images/commercial-vehicle-vinyl.png",
 },
+{
+  title: "Store Signage Installation",
+  text: "Premium storefront signage installation for restaurants, retail shops, cafés, and commercial spaces.",
+  image: "/images/commercial-store-signage.png",
+},
 ];
 
 const portfolio: PortfolioItem[] = [
@@ -105,6 +110,11 @@ const portfolio: PortfolioItem[] = [
   title: "Commercial Van Vinyl Branding",
   category: "Vehicle Vinyl Installation",
   image: "/images/commercial-vehicle-vinyl.png",
+},
+{
+  title: "Restaurant Store Signage Installation",
+  category: "Store Signage",
+  image: "/images/commercial-store-signage.png",
 },
 ];
 
@@ -205,9 +215,9 @@ export default function Home() {
           </p>
 
           <p className="mt-7 max-w-xl text-lg leading-8 text-[#4B4035]">
-            Arabic calligraphy, paintings, custom décor, wall graphics, banners,
-            and vinyl installations crafted to elevate homes and commercial
-            spaces with a personal artistic signature.
+           Arabic calligraphy, paintings, custom décor, wall graphics, banners,
+           vinyl installations, and storefront signage crafted to elevate homes
+          and commercial spaces with a personal artistic signature.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
