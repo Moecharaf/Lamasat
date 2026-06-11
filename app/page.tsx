@@ -14,11 +14,6 @@ type PortfolioItem = {
 
 const services: Service[] = [
   {
-    title: "Resin Tables",
-    text: "Custom one-of-a-kind resin tables designed to become the centerpiece of any space.",
-    image: "/images/service-resin-tables.png",
-  },
-  {
     title: "Calligraphy Art",
     text: "Arabic calligraphy artworks personalized with meaning, elegance, and artistic identity.",
     image: "/images/service-calligraphy-art.png",
@@ -32,6 +27,21 @@ const services: Service[] = [
     title: "Custom Décor Pieces",
     text: "Bespoke handmade décor pieces crafted to reflect your taste and elevate your space.",
     image: "/images/service-custom-decor.png",
+  },
+  {
+    title: "Wall Graphics & Vinyl",
+    text: "Premium vinyl graphics for walls, glass, offices, restaurants, and branded interiors.",
+    image: "/images/commercial-wall-graphics.png",
+  },
+  {
+    title: "Custom Banners",
+    text: "Elegant indoor and outdoor banners designed for events, campaigns, and commercial displays.",
+    image: "/images/commercial-banner.png",
+  },
+  {
+    title: "Window Vinyl & Installation",
+    text: "Professional window vinyl, glass graphics, and clean installation for commercial spaces.",
+    image: "/images/commercial-window-vinyl.png",
   },
 ];
 
@@ -66,6 +76,26 @@ const portfolio: PortfolioItem[] = [
     category: "Residential Décor",
     image: "/images/portfolio-6.png",
   },
+  {
+    title: "Glass Cabinet Calligraphy Sculpture",
+    category: "Custom Décor Piece",
+    image: "/images/portfolio-sculpture-cabinet.png",
+  },
+  {
+    title: "Premium Wall Graphics",
+    category: "Vinyl Wall Graphics",
+    image: "/images/commercial-wall-graphics.png",
+  },
+  {
+    title: "Luxury Custom Banner",
+    category: "Commercial Banner",
+    image: "/images/commercial-banner.png",
+  },
+  {
+    title: "Window Vinyl Installation",
+    category: "Commercial Visual Installation",
+    image: "/images/commercial-window-vinyl.png",
+  },
 ];
 
 const creationProcess = [
@@ -73,6 +103,21 @@ const creationProcess = [
   "Design & Materials",
   "Craftsmanship",
   "Delivery & Installation",
+];
+
+const commercialHighlights = [
+  {
+    title: "Branded Walls",
+    text: "Custom wall graphics that turn plain interiors into memorable branded spaces.",
+  },
+  {
+    title: "Glass & Window Vinyl",
+    text: "Elegant vinyl treatments for glass, windows, doors, storefronts, and office partitions.",
+  },
+  {
+    title: "Premium Installation",
+    text: "Clean application, careful alignment, and polished finishing for every site.",
+  },
 ];
 
 export default function Home() {
@@ -109,6 +154,9 @@ export default function Home() {
             </a>
             <a href="#services" className="transition hover:text-[#A77D2F]">
               Services
+            </a>
+            <a href="#commercial" className="transition hover:text-[#A77D2F]">
+              Commercial
             </a>
             <a href="#portfolio" className="transition hover:text-[#A77D2F]">
               Portfolio
@@ -147,9 +195,9 @@ export default function Home() {
           </p>
 
           <p className="mt-7 max-w-xl text-lg leading-8 text-[#4B4035]">
-            Custom resin tables, Arabic calligraphy, paintings, and handmade
-            décor crafted to elevate homes and commercial spaces with a personal
-            artistic signature.
+            Arabic calligraphy, paintings, custom décor, wall graphics, banners,
+            and vinyl installations crafted to elevate homes and commercial
+            spaces with a personal artistic signature.
           </p>
 
           <div className="mt-10 flex flex-wrap gap-4">
@@ -171,7 +219,7 @@ export default function Home() {
         <div className="relative min-h-[520px] overflow-hidden rounded-t-[180px] border border-[#C6A45D]/30 shadow-2xl">
           <Image
             src="/images/lamasat-hero.png"
-            alt="Lamasat resin table and calligraphy interior"
+            alt="Lamasat artistic interior and custom décor"
             fill
             className="object-cover"
             priority
@@ -186,7 +234,7 @@ export default function Home() {
           <div className="relative min-h-[420px] overflow-hidden rounded-3xl border border-[#C6A45D]/25 shadow-xl">
             <Image
               src="/images/lamasat-craftsmanship.png"
-              alt="Handcrafted resin table craftsmanship by Lamasat"
+              alt="Handcrafted artwork and premium finishing by Lamasat"
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -202,10 +250,11 @@ export default function Home() {
               Handcrafted Art with Meaning
             </h3>
             <p className="mt-6 text-lg leading-8 text-[#4B4035]">
-              Lamasat is an art studio specializing in handcrafted resin
-              tables, Arabic calligraphy, paintings, and bespoke décor. Every
-              piece is crafted with passion and care, blending tradition with
-              contemporary elegance.
+              Lamasat is a Lebanese art studio specializing in Arabic
+              calligraphy, paintings, bespoke décor, banners, wall graphics, and
+              vinyl installations. Every piece is crafted with passion and care,
+              blending artistic tradition with contemporary commercial and
+              residential design.
             </p>
 
             <div className="mt-10 grid grid-cols-2 gap-5 md:grid-cols-4">
@@ -228,19 +277,19 @@ export default function Home() {
           <h3 className="mt-3 font-serif text-5xl">Our Services</h3>
         </div>
 
-        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
             <div
               key={service.title}
               className="group border border-[#C6A45D]/25 bg-[#FFFDF8] p-7 shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
             >
-              <div className="relative mb-7 h-44 overflow-hidden rounded-2xl">
+              <div className="relative mb-7 h-52 overflow-hidden rounded-2xl">
                 <Image
                   src={service.image}
                   alt={`${service.title} by Lamasat`}
                   fill
                   className="object-cover transition duration-500 group-hover:scale-105"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/25 via-transparent to-transparent" />
               </div>
@@ -252,10 +301,53 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="portfolio" className="bg-[#111111] px-6 py-24 text-white">
+      <section id="commercial" className="bg-[#111111] px-6 py-24 text-white">
+        <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[0.9fr_1.4fr]">
+          <div className="flex flex-col justify-center">
+            <p className="text-sm font-semibold tracking-[0.25em] text-[#C6A45D]">
+              COMMERCIAL SPACES
+            </p>
+            <h3 className="mt-4 font-serif text-5xl leading-tight">
+              Commercial Visual
+              <br />
+              Installations
+            </h3>
+            <p className="mt-7 text-lg leading-8 text-white/70">
+              Lamasat creates premium visual installations for businesses,
+              offices, restaurants, events, and retail interiors. From custom
+              banners to vinyl wall graphics, every piece is designed to blend
+              brand identity with refined interior aesthetics.
+            </p>
+
+            <a
+              href="#contact"
+              className="mt-10 inline-flex w-fit border border-[#C6A45D] px-7 py-4 text-sm font-semibold tracking-[0.12em] text-[#C6A45D] transition hover:bg-[#C6A45D] hover:text-[#111111]"
+            >
+              DISCUSS A COMMERCIAL PROJECT
+            </a>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-3">
+            {commercialHighlights.map((item, index) => (
+              <div
+                key={item.title}
+                className="border border-[#C6A45D]/30 bg-white/[0.03] p-6"
+              >
+                <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-full bg-[#C6A45D] text-lg font-bold text-[#111111]">
+                  {index + 1}
+                </div>
+                <h4 className="font-serif text-2xl text-white">{item.title}</h4>
+                <p className="mt-4 leading-7 text-white/65">{item.text}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section id="portfolio" className="bg-[#F7F2E8] px-6 py-24">
         <div className="mx-auto max-w-7xl">
           <div className="text-center">
-            <p className="text-sm font-semibold tracking-[0.25em] text-[#C6A45D]">
+            <p className="text-sm font-semibold tracking-[0.25em] text-[#A77D2F]">
               FEATURED WORK
             </p>
             <h3 className="mt-3 font-serif text-5xl">Portfolio</h3>
@@ -265,7 +357,7 @@ export default function Home() {
             {portfolio.map((item) => (
               <article
                 key={item.title}
-                className="group overflow-hidden rounded-2xl border border-[#C6A45D]/20 bg-[#181818] shadow-xl transition hover:-translate-y-1 hover:border-[#C6A45D]/50"
+                className="group overflow-hidden border border-[#C6A45D]/25 bg-[#FFFDF8] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
               >
                 <div className="relative h-80 overflow-hidden">
                   <Image
@@ -275,14 +367,14 @@ export default function Home() {
                     className="object-cover transition duration-700 group-hover:scale-105"
                     sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/75 via-[#111111]/10 to-transparent" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/45 via-transparent to-transparent" />
                 </div>
 
                 <div className="p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#C6A45D]">
+                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A77D2F]">
                     {item.category}
                   </p>
-                  <h4 className="mt-3 font-serif text-2xl text-white">
+                  <h4 className="mt-3 font-serif text-2xl text-[#111111]">
                     {item.title}
                   </h4>
                 </div>
@@ -332,7 +424,8 @@ export default function Home() {
             </h3>
             <p className="mt-6 max-w-xl text-lg leading-8 text-[#4B4035]">
               Share your idea, preferred size, material, and inspiration. We
-              will help turn it into a unique handmade piece for your space.
+              will help turn it into a unique handmade piece or commercial
+              visual installation for your space.
             </p>
           </div>
 
@@ -341,8 +434,8 @@ export default function Home() {
               Request a Free Consultation
             </h4>
             <p className="mt-4 text-white/70">
-              Contact Lamasat to discuss resin tables, calligraphy, paintings,
-              and custom décor projects.
+              Contact Lamasat to discuss calligraphy, paintings, décor pieces,
+              banners, vinyl graphics, and installation projects.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <a
@@ -393,4 +486,4 @@ export default function Home() {
       </footer>
     </main>
   );
-} 
+}
