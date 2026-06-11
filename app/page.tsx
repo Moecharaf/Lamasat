@@ -355,31 +355,38 @@ export default function Home() {
 
           <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {portfolio.map((item) => (
-              <article
-                key={item.title}
-                className="group overflow-hidden border border-[#C6A45D]/25 bg-[#FFFDF8] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
-              >
-                <div className="relative h-80 overflow-hidden">
-                  <Image
-                    src={item.image}
-                    alt={`${item.title} by Lamasat`}
-                    fill
-                    className="object-cover transition duration-700 group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/45 via-transparent to-transparent" />
-                </div>
+  <a
+    key={item.title}
+    href={item.image}
+    target="_blank"
+    rel="noopener noreferrer"
+    className="group overflow-hidden border border-[#C6A45D]/25 bg-[#FFFDF8] shadow-sm transition hover:-translate-y-1 hover:shadow-xl"
+  >
+    <div className="relative h-80 overflow-hidden">
+      <Image
+        src={item.image}
+        alt={`${item.title} by Lamasat`}
+        fill
+        className="object-cover transition duration-700 group-hover:scale-105"
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-[#111111]/45 via-transparent to-transparent" />
 
-                <div className="p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A77D2F]">
-                    {item.category}
-                  </p>
-                  <h4 className="mt-3 font-serif text-2xl text-[#111111]">
-                    {item.title}
-                  </h4>
-                </div>
-              </article>
-            ))}
+      <div className="absolute bottom-4 right-4 border border-[#C6A45D] bg-[#111111]/80 px-4 py-2 text-xs font-semibold uppercase tracking-[0.16em] text-[#C6A45D] opacity-0 transition group-hover:opacity-100">
+        View Full Image
+      </div>
+    </div>
+
+    <div className="p-6">
+      <p className="text-xs font-semibold uppercase tracking-[0.25em] text-[#A77D2F]">
+        {item.category}
+      </p>
+      <h4 className="mt-3 font-serif text-2xl text-[#111111]">
+        {item.title}
+      </h4>
+    </div>
+  </a>
+))}
           </div>
         </div>
       </section>
