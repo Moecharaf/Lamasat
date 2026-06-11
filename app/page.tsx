@@ -43,6 +43,11 @@ const services: Service[] = [
     text: "Professional window vinyl, glass graphics, and clean installation for commercial spaces.",
     image: "/images/commercial-window-vinyl.png",
   },
+  {
+  title: "Vehicle Vinyl Branding",
+  text: "Premium vinyl branding for cars, vans, and commercial vehicles with professional design and clean installation.",
+  image: "/images/commercial-vehicle-vinyl.png",
+},
 ];
 
 const portfolio: PortfolioItem[] = [
@@ -96,6 +101,11 @@ const portfolio: PortfolioItem[] = [
     category: "Commercial Visual Installation",
     image: "/images/commercial-window-vinyl.png",
   },
+  {
+  title: "Commercial Van Vinyl Branding",
+  category: "Vehicle Vinyl Installation",
+  image: "/images/commercial-vehicle-vinyl.png",
+},
 ];
 
 const creationProcess = [
